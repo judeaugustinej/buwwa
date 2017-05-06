@@ -56,6 +56,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'buwwa.urls'
 
+LOGIN_REDIRECT_URL = 'home'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
