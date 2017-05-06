@@ -49,6 +49,39 @@ python manage.py runserver
 
 ## DB-Schema
 
+* UserType
+
+| id           | user_type      |
+| :---         |     :---:      |
+| 1            | foodsupplier   |
+| 2            | ngo            |
+
+* FoodType
+
+| id           | food_type      |
+| :---         |     :---:      |
+| 1            | milk           |
+| 2            | vegatables     |
+| 3            | snacks         |
+
+* FoodState
+
+| id           | food_state                       |
+| :---         |     :---:                        |
+| 1            | Food made availiable by supplier |
+| 2            | Food taken by NGO                |
+| 3            | Need Food request raised by NGO  |
+
+* UserProfile
+
+| id   | user_type | food_type  | user_type  | quantity | contact_number | user_type |contact_number  | user_type  | food_state |
+| :--- |  :---:    | :---       |  :---:     | :---     |    :---:       | :---      |  :---:         | :---       |  :---:     |
+
+* FoodRequest
+
+| user_id   | user_type | food_type  |  food_state |
+| :---      |  :---:    | :---       |  :---:      |
+
 
 ## Tech-Stack
 * Django - Fullstack web-app ie(MVC)
