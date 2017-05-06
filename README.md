@@ -1,53 +1,73 @@
-# Heroku Django Starter Template
+# Buwwa ZERO FOOD WASTAGE
 
-An utterly fantastic project starter template for Django 1.10.
+* To minimize food wastage by connecting foodsupplier(Restaurant, Hotels, ...) with NGO(Old age home, Orphanages)
+
+* App selected for savethehacker-2017[http://www.savethehacker.com/] Hackathon.
+
+## App Work Flow
+
+* Foodsupplier or NGO can signup or register.
+
+* Foodsupplier can sponser food by filling-up a SPONSER-FOOD form, as soon as the foodsupplier does that a request is send to NGO as Food available request.
+
+* NGO can request for food by filling-up a NEED-FOOD form, as soon as the NGO does that a request is send to Foodsupplier as NEED-Food request.
 
 ## Features
 
-- Production-ready configuration for Static Files, Database Settings, Gunicorn, etc.
-- Enhancements to Django's static file serving functionality via WhiteNoise.
-- Latest Python 3.6 runtime environment. 
+- SMS/Email alert to NGO and Foodsupplier
+- Maps to find location of NGO and Foodsupplier for better co-ordination
+- Recommendation of food-availablity to NGO
+- Recommendation for food-sponsoring to Foodsuppliers
+- API for IOS/Andriod/3rd-party apps.
 
-## How to Use
+## Code-development-work-flow
 
-To use this project, follow these steps:
+* Clone the code
+```
+git clone https://github.com/judeaugustinej/buwwa.git
+```
 
-1. Create your working environment.
-2. Install Django (`$ pip install django`)
-3. Create a new project using this template
+* Install required packages
+```
+pip install -r requirements.txt
+```
 
-## Creating Your Project
+* Run migrations
+```
+python manage.py migrate
+```
 
-Using this template to create a new Django app is easy::
+* Create a user.
+```
+python manage.py createsuperuser
+```
 
-    $ django-admin.py startproject --template=https://github.com/heroku/heroku-django-template/archive/master.zip --name=Procfile helloworld
+* Start the app
+```
+python manage.py runserver
+```
 
-(If this doesn't work on windows, replace `django-admin.py` with `django-admin`)
+## DB-Schema
 
-You can replace ``helloworld`` with your desired project name.
 
-## Deployment to Heroku
+## Tech-Stack
+* Django - Fullstack web-app ie(MVC)
+* Django-rest-framework - Rest-api
+* Database - PostgresDB
+* Deployment - Heroku
+* CI-CD - git-travis-Heroku
 
-    $ git init
-    $ git add -A
-    $ git commit -m "Initial commit"
+## Team
 
-    $ heroku create
-    $ git push heroku master
+* Jude
+* sri
+* karthick
+* 
 
-    $ heroku run python manage.py migrate
-
-See also, a [ready-made application](https://github.com/heroku/python-getting-started), ready to deploy.
-
-## Using Python 2.7?
-
-Just update `runtime.txt` to `python-2.7.13` (no trailing spaces or newlines!).
-
+## TODO
+* Seperate UI from Backend.
+* Dockerise the app.
+* Deploy in aws
+* Native iOS/Andriod support
 
 ## License: MIT
-
-## Further Reading
-
-- [Gunicorn](https://warehouse.python.org/project/gunicorn/)
-- [WhiteNoise](https://warehouse.python.org/project/whitenoise/)
-- [dj-database-url](https://warehouse.python.org/project/dj-database-url/)
